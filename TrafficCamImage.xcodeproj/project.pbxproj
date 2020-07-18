@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		526542F524C1A71E00C0E387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526542F424C1A71E00C0E387 /* AppDelegate.swift */; };
+		526542F724C1A71E00C0E387 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526542F624C1A71E00C0E387 /* SceneDelegate.swift */; };
+		526542F924C1A71E00C0E387 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526542F824C1A71E00C0E387 /* ViewController.swift */; };
+		526542FC24C1A71E00C0E387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526542FA24C1A71E00C0E387 /* Main.storyboard */; };
+		526542FE24C1A72000C0E387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 526542FD24C1A72000C0E387 /* Assets.xcassets */; };
+		5265430124C1A72000C0E387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526542FF24C1A72000C0E387 /* LaunchScreen.storyboard */; };
+		5265430C24C1A72100C0E387 /* TrafficCamImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265430B24C1A72100C0E387 /* TrafficCamImageTests.swift */; };
+		5265431724C1A72100C0E387 /* TrafficCamImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265431624C1A72100C0E387 /* TrafficCamImageUITests.swift */; };
+		5265432E24C1A83600C0E387 /* CamInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265432D24C1A83600C0E387 /* CamInfoProvider.swift */; };
+		5265433724C1ACAA00C0E387 /* CameraAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265433624C1ACAA00C0E387 /* CameraAnnotation.swift */; };
+		5265433A24C1AF5700C0E387 /* CamInfoProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265433924C1AF5700C0E387 /* CamInfoProviderTest.swift */; };
+		5265434124C1BAB200C0E387 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265434024C1BAB200C0E387 /* HttpRequest.swift */; };
+		5265434324C1BC0400C0E387 /* HttpGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265434224C1BC0400C0E387 /* HttpGet.swift */; };
+		5265434524C1BC5C00C0E387 /* HttpJsonGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265434424C1BC5C00C0E387 /* HttpJsonGet.swift */; };
+		5265434724C1C1B900C0E387 /* camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 5265434624C1C1B900C0E387 /* camera.json */; };
+		5265434924C1D04800C0E387 /* CamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265434824C1D04800C0E387 /* CamResponse.swift */; };
+		52714FBB24C29AE9004CE9F0 /* CamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52714FBA24C29AE9004CE9F0 /* CamRepository.swift */; };
+		52714FBD24C29AFC004CE9F0 /* CamRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52714FBC24C29AFC004CE9F0 /* CamRepositoryProtocol.swift */; };
+		52714FBF24C29BEA004CE9F0 /* CamProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52714FBE24C29BEA004CE9F0 /* CamProviderProtocol.swift */; };
+		52714FC124C29C5E004CE9F0 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52714FC024C29C5E004CE9F0 /* MapViewModel.swift */; };
+		52714FC424C29C7F004CE9F0 /* CamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52714FC324C29C7F004CE9F0 /* CamRepository.swift */; };
+		52714FC624C2A30B004CE9F0 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52714FC524C2A30B004CE9F0 /* DataError.swift */; };
+		5298381C24C2CBC400461E5F /* MapViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298381B24C2CBC400461E5F /* MapViewModelTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5265430824C1A72100C0E387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 526542E924C1A71E00C0E387 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 526542F024C1A71E00C0E387;
+			remoteInfo = TrafficCamImage;
+		};
+		5265431324C1A72100C0E387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 526542E924C1A71E00C0E387 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 526542F024C1A71E00C0E387;
+			remoteInfo = TrafficCamImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		526542F124C1A71E00C0E387 /* TrafficCamImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficCamImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		526542F424C1A71E00C0E387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		526542F624C1A71E00C0E387 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		526542F824C1A71E00C0E387 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		526542FB24C1A71E00C0E387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		526542FD24C1A72000C0E387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5265430024C1A72000C0E387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5265430224C1A72000C0E387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5265430724C1A72100C0E387 /* TrafficCamImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrafficCamImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5265430B24C1A72100C0E387 /* TrafficCamImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficCamImageTests.swift; sourceTree = "<group>"; };
+		5265430D24C1A72100C0E387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5265431224C1A72100C0E387 /* TrafficCamImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrafficCamImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5265431624C1A72100C0E387 /* TrafficCamImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficCamImageUITests.swift; sourceTree = "<group>"; };
+		5265431824C1A72100C0E387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5265432D24C1A83600C0E387 /* CamInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamInfoProvider.swift; sourceTree = "<group>"; };
+		5265433624C1ACAA00C0E387 /* CameraAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAnnotation.swift; sourceTree = "<group>"; };
+		5265433924C1AF5700C0E387 /* CamInfoProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamInfoProviderTest.swift; sourceTree = "<group>"; };
+		5265434024C1BAB200C0E387 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		5265434224C1BC0400C0E387 /* HttpGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGet.swift; sourceTree = "<group>"; };
+		5265434424C1BC5C00C0E387 /* HttpJsonGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpJsonGet.swift; sourceTree = "<group>"; };
+		5265434624C1C1B900C0E387 /* camera.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = camera.json; sourceTree = "<group>"; };
+		5265434824C1D04800C0E387 /* CamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamResponse.swift; sourceTree = "<group>"; };
+		52714FBA24C29AE9004CE9F0 /* CamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamRepository.swift; sourceTree = "<group>"; };
+		52714FBC24C29AFC004CE9F0 /* CamRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamRepositoryProtocol.swift; sourceTree = "<group>"; };
+		52714FBE24C29BEA004CE9F0 /* CamProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamProviderProtocol.swift; sourceTree = "<group>"; };
+		52714FC024C29C5E004CE9F0 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		52714FC324C29C7F004CE9F0 /* CamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamRepository.swift; sourceTree = "<group>"; };
+		52714FC524C2A30B004CE9F0 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		5298381B24C2CBC400461E5F /* MapViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		526542EE24C1A71E00C0E387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5265430424C1A72100C0E387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5265430F24C1A72100C0E387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		526542E824C1A71E00C0E387 = {
+			isa = PBXGroup;
+			children = (
+				526542F324C1A71E00C0E387 /* TrafficCamImage */,
+				5265430A24C1A72100C0E387 /* TrafficCamImageTests */,
+				5265431524C1A72100C0E387 /* TrafficCamImageUITests */,
+				526542F224C1A71E00C0E387 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		526542F224C1A71E00C0E387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				526542F124C1A71E00C0E387 /* TrafficCamImage.app */,
+				5265430724C1A72100C0E387 /* TrafficCamImageTests.xctest */,
+				5265431224C1A72100C0E387 /* TrafficCamImageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		526542F324C1A71E00C0E387 /* TrafficCamImage */ = {
+			isa = PBXGroup;
+			children = (
+				5265433F24C1BA6E00C0E387 /* Net */,
+				5265432624C1A74D00C0E387 /* ViewModel */,
+				5265432524C1A73C00C0E387 /* Views */,
+				5265432424C1A73000C0E387 /* Data */,
+				526542F424C1A71E00C0E387 /* AppDelegate.swift */,
+				526542FD24C1A72000C0E387 /* Assets.xcassets */,
+				526542FF24C1A72000C0E387 /* LaunchScreen.storyboard */,
+				5265430224C1A72000C0E387 /* Info.plist */,
+			);
+			path = TrafficCamImage;
+			sourceTree = "<group>";
+		};
+		5265430A24C1A72100C0E387 /* TrafficCamImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				5265432C24C1A7B600C0E387 /* ViewModel */,
+				5265432924C1A79800C0E387 /* Data */,
+				5265430B24C1A72100C0E387 /* TrafficCamImageTests.swift */,
+				5265430D24C1A72100C0E387 /* Info.plist */,
+			);
+			path = TrafficCamImageTests;
+			sourceTree = "<group>";
+		};
+		5265431524C1A72100C0E387 /* TrafficCamImageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5265431624C1A72100C0E387 /* TrafficCamImageUITests.swift */,
+				5265431824C1A72100C0E387 /* Info.plist */,
+			);
+			path = TrafficCamImageUITests;
+			sourceTree = "<group>";
+		};
+		5265432424C1A73000C0E387 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52714FB924C29AA5004CE9F0 /* Repository */,
+				5265432824C1A77500C0E387 /* Providers */,
+				5265432724C1A76E00C0E387 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5265432524C1A73C00C0E387 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				526542F624C1A71E00C0E387 /* SceneDelegate.swift */,
+				526542F824C1A71E00C0E387 /* ViewController.swift */,
+				526542FA24C1A71E00C0E387 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5265432624C1A74D00C0E387 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52714FC024C29C5E004CE9F0 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5265432724C1A76E00C0E387 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52714FC724C2A317004CE9F0 /* Error */,
+				5265433824C1AD4900C0E387 /* Map */,
+				5265433524C1A9CD00C0E387 /* Camera */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5265432824C1A77500C0E387 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				5265432D24C1A83600C0E387 /* CamInfoProvider.swift */,
+				52714FBE24C29BEA004CE9F0 /* CamProviderProtocol.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		5265432924C1A79800C0E387 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52714FC224C29C66004CE9F0 /* Repository */,
+				5265432A24C1A7A000C0E387 /* Providers */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5265432A24C1A7A000C0E387 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				5265433924C1AF5700C0E387 /* CamInfoProviderTest.swift */,
+				5265434624C1C1B900C0E387 /* camera.json */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		5265432C24C1A7B600C0E387 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5298381B24C2CBC400461E5F /* MapViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5265433524C1A9CD00C0E387 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				5265434824C1D04800C0E387 /* CamResponse.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		5265433824C1AD4900C0E387 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5265433624C1ACAA00C0E387 /* CameraAnnotation.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		5265433F24C1BA6E00C0E387 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				5265434024C1BAB200C0E387 /* HttpRequest.swift */,
+				5265434224C1BC0400C0E387 /* HttpGet.swift */,
+				5265434424C1BC5C00C0E387 /* HttpJsonGet.swift */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		52714FB924C29AA5004CE9F0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				52714FBA24C29AE9004CE9F0 /* CamRepository.swift */,
+				52714FBC24C29AFC004CE9F0 /* CamRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		52714FC224C29C66004CE9F0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				52714FC324C29C7F004CE9F0 /* CamRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		52714FC724C2A317004CE9F0 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				52714FC524C2A30B004CE9F0 /* DataError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		526542F024C1A71E00C0E387 /* TrafficCamImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5265431B24C1A72100C0E387 /* Build configuration list for PBXNativeTarget "TrafficCamImage" */;
+			buildPhases = (
+				526542ED24C1A71E00C0E387 /* Sources */,
+				526542EE24C1A71E00C0E387 /* Frameworks */,
+				526542EF24C1A71E00C0E387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrafficCamImage;
+			productName = TrafficCamImage;
+			productReference = 526542F124C1A71E00C0E387 /* TrafficCamImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5265430624C1A72100C0E387 /* TrafficCamImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5265431E24C1A72100C0E387 /* Build configuration list for PBXNativeTarget "TrafficCamImageTests" */;
+			buildPhases = (
+				5265430324C1A72100C0E387 /* Sources */,
+				5265430424C1A72100C0E387 /* Frameworks */,
+				5265430524C1A72100C0E387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5265430924C1A72100C0E387 /* PBXTargetDependency */,
+			);
+			name = TrafficCamImageTests;
+			productName = TrafficCamImageTests;
+			productReference = 5265430724C1A72100C0E387 /* TrafficCamImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5265431124C1A72100C0E387 /* TrafficCamImageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5265432124C1A72100C0E387 /* Build configuration list for PBXNativeTarget "TrafficCamImageUITests" */;
+			buildPhases = (
+				5265430E24C1A72100C0E387 /* Sources */,
+				5265430F24C1A72100C0E387 /* Frameworks */,
+				5265431024C1A72100C0E387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5265431424C1A72100C0E387 /* PBXTargetDependency */,
+			);
+			name = TrafficCamImageUITests;
+			productName = TrafficCamImageUITests;
+			productReference = 5265431224C1A72100C0E387 /* TrafficCamImageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		526542E924C1A71E00C0E387 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "John Freidrich Cinco";
+				TargetAttributes = {
+					526542F024C1A71E00C0E387 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					5265430624C1A72100C0E387 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 526542F024C1A71E00C0E387;
+					};
+					5265431124C1A72100C0E387 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 526542F024C1A71E00C0E387;
+					};
+				};
+			};
+			buildConfigurationList = 526542EC24C1A71E00C0E387 /* Build configuration list for PBXProject "TrafficCamImage" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 526542E824C1A71E00C0E387;
+			productRefGroup = 526542F224C1A71E00C0E387 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				526542F024C1A71E00C0E387 /* TrafficCamImage */,
+				5265430624C1A72100C0E387 /* TrafficCamImageTests */,
+				5265431124C1A72100C0E387 /* TrafficCamImageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		526542EF24C1A71E00C0E387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5265430124C1A72000C0E387 /* LaunchScreen.storyboard in Resources */,
+				526542FE24C1A72000C0E387 /* Assets.xcassets in Resources */,
+				526542FC24C1A71E00C0E387 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5265430524C1A72100C0E387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5265434724C1C1B900C0E387 /* camera.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5265431024C1A72100C0E387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		526542ED24C1A71E00C0E387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5265434124C1BAB200C0E387 /* HttpRequest.swift in Sources */,
+				5265432E24C1A83600C0E387 /* CamInfoProvider.swift in Sources */,
+				52714FBF24C29BEA004CE9F0 /* CamProviderProtocol.swift in Sources */,
+				52714FBD24C29AFC004CE9F0 /* CamRepositoryProtocol.swift in Sources */,
+				52714FC624C2A30B004CE9F0 /* DataError.swift in Sources */,
+				52714FC124C29C5E004CE9F0 /* MapViewModel.swift in Sources */,
+				5265434324C1BC0400C0E387 /* HttpGet.swift in Sources */,
+				5265434924C1D04800C0E387 /* CamResponse.swift in Sources */,
+				526542F924C1A71E00C0E387 /* ViewController.swift in Sources */,
+				5265434524C1BC5C00C0E387 /* HttpJsonGet.swift in Sources */,
+				526542F524C1A71E00C0E387 /* AppDelegate.swift in Sources */,
+				5265433724C1ACAA00C0E387 /* CameraAnnotation.swift in Sources */,
+				526542F724C1A71E00C0E387 /* SceneDelegate.swift in Sources */,
+				52714FBB24C29AE9004CE9F0 /* CamRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5265430324C1A72100C0E387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5265433A24C1AF5700C0E387 /* CamInfoProviderTest.swift in Sources */,
+				52714FC424C29C7F004CE9F0 /* CamRepository.swift in Sources */,
+				5265430C24C1A72100C0E387 /* TrafficCamImageTests.swift in Sources */,
+				5298381C24C2CBC400461E5F /* MapViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5265430E24C1A72100C0E387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5265431724C1A72100C0E387 /* TrafficCamImageUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5265430924C1A72100C0E387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 526542F024C1A71E00C0E387 /* TrafficCamImage */;
+			targetProxy = 5265430824C1A72100C0E387 /* PBXContainerItemProxy */;
+		};
+		5265431424C1A72100C0E387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 526542F024C1A71E00C0E387 /* TrafficCamImage */;
+			targetProxy = 5265431324C1A72100C0E387 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		526542FA24C1A71E00C0E387 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				526542FB24C1A71E00C0E387 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		526542FF24C1A72000C0E387 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5265430024C1A72000C0E387 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5265431924C1A72100C0E387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5265431A24C1A72100C0E387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5265431C24C1A72100C0E387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrafficCamImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcinco.TrafficCamImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5265431D24C1A72100C0E387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrafficCamImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcinco.TrafficCamImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5265431F24C1A72100C0E387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrafficCamImageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcinco.TrafficCamImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrafficCamImage.app/TrafficCamImage";
+			};
+			name = Debug;
+		};
+		5265432024C1A72100C0E387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrafficCamImageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcinco.TrafficCamImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrafficCamImage.app/TrafficCamImage";
+			};
+			name = Release;
+		};
+		5265432224C1A72100C0E387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrafficCamImageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcinco.TrafficCamImageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrafficCamImage;
+			};
+			name = Debug;
+		};
+		5265432324C1A72100C0E387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrafficCamImageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcinco.TrafficCamImageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrafficCamImage;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		526542EC24C1A71E00C0E387 /* Build configuration list for PBXProject "TrafficCamImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5265431924C1A72100C0E387 /* Debug */,
+				5265431A24C1A72100C0E387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5265431B24C1A72100C0E387 /* Build configuration list for PBXNativeTarget "TrafficCamImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5265431C24C1A72100C0E387 /* Debug */,
+				5265431D24C1A72100C0E387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5265431E24C1A72100C0E387 /* Build configuration list for PBXNativeTarget "TrafficCamImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5265431F24C1A72100C0E387 /* Debug */,
+				5265432024C1A72100C0E387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5265432124C1A72100C0E387 /* Build configuration list for PBXNativeTarget "TrafficCamImageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5265432224C1A72100C0E387 /* Debug */,
+				5265432324C1A72100C0E387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 526542E924C1A71E00C0E387 /* Project object */;
+}
