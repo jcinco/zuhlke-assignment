@@ -56,6 +56,20 @@ class MapViewModel:NSObject {
     }
     
     
+    func getImageForCam(camera: Camera, callback: @escaping (UIImage?)->Void) {
+        if (self.reposiory != nil) {
+            self.reposiory?.getCamImage(camId: camera.cameraId ?? "") { data in
+                if (nil != data) {
+                    callback(UIImage(data: data!))
+                }
+                else {
+                    callback(nil)
+                }
+            }
+        }
+    }
+    
+    
     
     
     // singleton implementation

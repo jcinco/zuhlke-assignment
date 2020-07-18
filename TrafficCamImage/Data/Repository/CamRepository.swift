@@ -28,7 +28,7 @@ class CamRepository:NSObject, CamRepositoryProtocol {
      */
     func getCamImage(camId: String, callback: @escaping (Data?) -> Void) {
         var failure = DataError()
-        guard let inProvider = provider else {
+        if provider == nil {
             failure.message = "No provider specified"
             failure.statusCode = -1
             return

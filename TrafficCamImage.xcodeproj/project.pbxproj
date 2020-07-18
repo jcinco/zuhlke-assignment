@@ -30,6 +30,7 @@
 		52714FC424C29C7F004CE9F0 /* CamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52714FC324C29C7F004CE9F0 /* CamRepository.swift */; };
 		52714FC624C2A30B004CE9F0 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52714FC524C2A30B004CE9F0 /* DataError.swift */; };
 		5298381C24C2CBC400461E5F /* MapViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298381B24C2CBC400461E5F /* MapViewModelTest.swift */; };
+		52A8623724C2F8D600BC2213 /* CamImagePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8623624C2F8D600BC2213 /* CamImagePopup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		52714FC324C29C7F004CE9F0 /* CamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamRepository.swift; sourceTree = "<group>"; };
 		52714FC524C2A30B004CE9F0 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		5298381B24C2CBC400461E5F /* MapViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTest.swift; sourceTree = "<group>"; };
+		52A8623624C2F8D600BC2213 /* CamImagePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamImagePopup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		5265432524C1A73C00C0E387 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52A8623124C2E78900BC2213 /* Popup */,
 				526542F624C1A71E00C0E387 /* SceneDelegate.swift */,
 				526542F824C1A71E00C0E387 /* ViewController.swift */,
 				526542FA24C1A71E00C0E387 /* Main.storyboard */,
@@ -283,6 +286,14 @@
 				52714FC524C2A30B004CE9F0 /* DataError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		52A8623124C2E78900BC2213 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				52A8623624C2F8D600BC2213 /* CamImagePopup.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +442,7 @@
 				5265433724C1ACAA00C0E387 /* CameraAnnotation.swift in Sources */,
 				526542F724C1A71E00C0E387 /* SceneDelegate.swift in Sources */,
 				52714FBB24C29AE9004CE9F0 /* CamRepository.swift in Sources */,
+				52A8623724C2F8D600BC2213 /* CamImagePopup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -99,8 +99,8 @@ struct Cameras: Codable {
 }
 
 struct ImageMetadata: Codable {
-    var height: Int?
-    var width: Int?
+    var height: Float?
+    var width: Float?
     var md5: String?
 }
 

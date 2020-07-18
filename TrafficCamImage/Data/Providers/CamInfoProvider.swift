@@ -106,15 +106,19 @@ class CamInfoProvider: CamProviderProtocol {
                 let cam = cams?.filter { $0.cameraId == forCamId }.first
                 if (cam != nil) {
                     let imgUrl = URL(string: cam?.image ?? "")!
-                    let request:HttpGet? = self.httpGetClass?.init(url: imgUrl)
-                    request?.execute { data, httpResponse, error in
-                        if (httpResponse?.statusCode == 200) {
-                            onResponse(data)
+                    DispatchQueue.global().async { [weak self] in
+                        if let imgData = try? Data(contentsOf: imgUrl) {
+                            DispatchQueue.main.async {
+                                onResponse(imgData)
+                            }
                         }
                         else {
-                            onResponse(nil)
+                            DispatchQueue.main.async {
+                                onResponse(nil)
+                            }
                         }
                     }
+                    
                 }
             }
         }
