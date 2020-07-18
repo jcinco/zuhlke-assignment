@@ -58,7 +58,9 @@ class CamRepository:NSObject, CamRepositoryProtocol {
         
     }
     
-    
+    func destroy() {
+        self._provider = nil
+    }
     
     /**
         Returns the latest timestamp

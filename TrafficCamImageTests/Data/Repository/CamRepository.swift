@@ -19,6 +19,7 @@ class CamRespositoryTest: XCTestCase {
         self.repository?.provider = mockProvder
     }
     
+    
     func testGetAllCamsSuccess() {
         // Arrange
         let expectation = self.expectation(description: "get all cams successfuly")
@@ -39,6 +40,7 @@ class CamRespositoryTest: XCTestCase {
         XCTAssertNotNil(camList)
         XCTAssertTrue(camList?.count ?? 0 > 0) // should be greater than zero
         XCTAssertNil(fail)
+       
     }
     
     
@@ -100,7 +102,7 @@ class MockCamProvider: CamProviderProtocol {
         var cams: [Camera]? = nil
         if (self.isSuccess) {
             // return a list of camera objects
-            let cam = Camera(timestamp: "2020-07-18T11:00:00", cameraId: "123", image: "", image_metadata: nil, location: nil)
+            let cam = Camera(timestamp: "2020-07-18T11:00:00", cameraId: "1501", image: "", image_metadata: nil, location: nil)
             cams = [cam]; // we just need one for now
             onResponse(cams, nil)
         }

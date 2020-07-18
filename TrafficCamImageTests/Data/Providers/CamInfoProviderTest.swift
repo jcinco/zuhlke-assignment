@@ -28,8 +28,8 @@ class CamInfoProviderTest: XCTestCase {
     func testSuccessFetchCameras() {
         // Happy path
         // Arrange
-         MockJsonGetClient.isSuccess = true
-        
+        MockJsonGetClient.isSuccess = true
+        MockJsonGetClient.returnNull = false
         let expectation = self.expectation(description: "successful fetch")
         var result: [Camera]? = nil
         let timeStamp = "2020-07-17T13:00:00"
@@ -113,6 +113,7 @@ class CamInfoProviderTest: XCTestCase {
         
         // Arrange
         MockJsonGetClient.isSuccess = true
+        MockJsonGetClient.returnNull = false
                
         let expectation = self.expectation(description: "successful fetch image")
         let camId = "1501"

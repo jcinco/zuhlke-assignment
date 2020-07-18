@@ -39,6 +39,28 @@ class MapViewModelTest: XCTestCase {
         XCTAssertNil(failure)
     }
     
+    func testGetCamsFailure() {
+        // Arrange
+        MockRepository.isSuccess = false
+        var expectation = self.expectation(description: "Fetch camera annotation list failure")
+        var camList: [CameraAnnotation]? = nil
+        var failure: DataError? = nil
+        
+        
+        // Act
+        self.viewModel.getCameraList { list, error in
+            failure = error
+            camList = list
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 30, handler: nil)
+        // Assert
+        XCTAssertTrue(camList?.count ?? 1 < 1)
+        XCTAssertNotNil(failure)
+    }
+    
+    
+    
 }
 
 
@@ -62,16 +84,19 @@ class MockRepository: CamRepositoryProtocol {
         }
         else {
             // return failure
-            callback([], nil)
+            callback([], DataError(message: "Failed", statusCode: -1))
         }
     }
     
     func getCamImage(camId: String, callback: @escaping (Data?) -> Void) {
         if (MockRepository.isSuccess) {
             // return a dummy data
+            let dummyData = Data("abc".utf8)
+            callback(dummyData)
         }
         else {
             // return failure
+            callback(nil)
         }
     }
     

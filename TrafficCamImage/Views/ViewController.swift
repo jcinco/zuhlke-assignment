@@ -54,7 +54,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
             else {
                 self.showDialog(title: "Error", message: error?.message ?? "Failed to fetch camera locations.")
             }
-            self.hideProgress()
+            
+            DispatchQueue.main.async {
+                self.hideProgress()
+            }
         }
     }
     
@@ -76,7 +79,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 // show error
                 self.showDialog(title: "Error", message: "Failed to get camera image.")
             }
-            self.hideProgress()
+            DispatchQueue.main.async {
+                self.hideProgress()
+            }
+            
         }
     }
     
@@ -87,13 +93,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
  
     private func hideProgress() {
-        self.progress.stopAnimating()
-        self.progress.isHidden = true
+        if (self.progress != nil) {
+            self.progress.stopAnimating()
+            self.progress.isHidden = true
+        }
     }
     
     private func showProgress() {
-        self.progress.startAnimating()
-        self.progress.isHidden = false
+        if (self.progress != nil) {
+            self.progress.startAnimating()
+            self.progress.isHidden = false
+        }
     }
     
     

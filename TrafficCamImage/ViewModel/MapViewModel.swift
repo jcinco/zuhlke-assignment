@@ -70,6 +70,10 @@ class MapViewModel:NSObject {
     }
     
     
+    func destroy() {
+        
+        self.reposiory = nil
+    }
     
     
     // singleton implementation
