@@ -88,15 +88,15 @@ class MockRepository: CamRepositoryProtocol {
         }
     }
     
-    func getCamImage(camId: String, callback: @escaping (Data?) -> Void) {
+    func getCamImage(camId: String, callback: @escaping (Data?, String?) -> Void) {
         if (MockRepository.isSuccess) {
             // return a dummy data
             let dummyData = Data("abc".utf8)
-            callback(dummyData)
+            callback(dummyData, "2020-07-18T16:00:00")
         }
         else {
             // return failure
-            callback(nil)
+            callback(nil, nil)
         }
     }
     

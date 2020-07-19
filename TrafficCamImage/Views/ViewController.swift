@@ -69,11 +69,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let cam = view.annotation as! CameraAnnotation
         self.showProgress()
-        self.viewModel.getImageForCam(camera: cam.camera!) { image in
+        self.viewModel.getImageForCam(camera: cam.camera!) { image, timestamp in
            DispatchQueue.main.async {
                 if (nil != image) {
                     self.camImagePopup.show(image: image!,
-                                            title: cam.camera?.timestamp ?? "Traffic Cam Image",
+                                            title: timestamp ?? "No Time",
                                             meta: cam.camera?.image_metadata) { _ in
                         self.camImagePopup.hide()
                     }

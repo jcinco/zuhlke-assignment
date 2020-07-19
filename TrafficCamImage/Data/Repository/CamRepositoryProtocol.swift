@@ -13,6 +13,6 @@ protocol CamRepositoryProtocol {
     var provider: CamProviderProtocol? {get set}
     
     func getAllCam(callback: @escaping ([Camera]?, DataError?)->Void)
-    func getCamImage(camId: String, callback: @escaping (Data?)->Void)
+    func getCamImage(camId: String, callback: @escaping (Data?, String?)->Void)
     
 }

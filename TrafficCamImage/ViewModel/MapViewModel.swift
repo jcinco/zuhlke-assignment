@@ -56,15 +56,15 @@ class MapViewModel:NSObject {
     }
     
     
-    func getImageForCam(camera: Camera, callback: @escaping (UIImage?)->Void) {
+    func getImageForCam(camera: Camera, callback: @escaping (UIImage?, String?)->Void) {
         if (self.reposiory != nil) {
-            self.reposiory?.getCamImage(camId: camera.cameraId ?? "") { data in
+            self.reposiory?.getCamImage(camId: camera.cameraId ?? "") { data, timestamp in
                 DispatchQueue.main.async {
                     if (nil != data) {
-                        callback(UIImage(data: data!))
+                        callback(UIImage(data: data!), timestamp)
                     }
                     else {
-                        callback(nil)
+                        callback(nil, nil)
                     }
                 }
             }

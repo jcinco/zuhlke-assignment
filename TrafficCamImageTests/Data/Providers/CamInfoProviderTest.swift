@@ -120,7 +120,7 @@ class CamInfoProviderTest: XCTestCase {
         var imageData: Data? = nil
         
         // Act
-        self.provider?.getImage(forCamId: camId) { data in
+        self.provider?.getImage(forCamId: camId) { data, timestamp in
             imageData = data
             expectation.fulfill()
         }
@@ -141,7 +141,7 @@ class CamInfoProviderTest: XCTestCase {
         var imageData: Data? = nil
         
         // Act
-        self.provider?.getImage(forCamId: camId) { data in
+        self.provider?.getImage(forCamId: camId) { data, time in
             imageData = data
             expectation.fulfill()
         }

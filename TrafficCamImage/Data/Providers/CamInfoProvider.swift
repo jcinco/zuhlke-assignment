@@ -95,12 +95,12 @@ class CamInfoProvider: CamProviderProtocol {
     
     
     
-    func getImage(forCamId: String, onResponse: @escaping (Data?) -> Void) {
+    func getImage(forCamId: String, onResponse: @escaping (Data?, String?) -> Void) {
         // first get the latest info
         self.fetchCameras(timeStamp: self.getTimeStampNow()) { cams, failure in
             // if failure
             if (failure?.statusCode != nil) {
-                onResponse(nil)
+                onResponse(nil, nil)
             }
             else {
                 let cam = cams?.filter { $0.cameraId == forCamId }.first
@@ -109,12 +109,13 @@ class CamInfoProvider: CamProviderProtocol {
                     DispatchQueue.global().async { [weak self] in
                         if let imgData = try? Data(contentsOf: imgUrl) {
                             DispatchQueue.main.async {
-                                onResponse(imgData)
+                                let time = cam?.timestamp
+                                onResponse(imgData, time)
                             }
                         }
                         else {
                             DispatchQueue.main.async {
-                                onResponse(nil)
+                                onResponse(nil, nil)
                             }
                         }
                     }

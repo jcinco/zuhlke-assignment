@@ -17,5 +17,5 @@ struct CamProviderFailure {
 protocol CamProviderProtocol {
     func fetchCameras(timeStamp: String?, onResponse: @escaping ([Camera]?, DataError?) -> Void)
     
-    func getImage(forCamId: String, onResponse: @escaping (Data?)->Void)
+    func getImage(forCamId: String, onResponse: @escaping (Data?, String?)->Void)
 }

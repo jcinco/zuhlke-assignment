@@ -73,16 +73,18 @@ class CamRespositoryTest: XCTestCase {
         self.mockProvder?.isSuccess = true
         
         var imageData: Data? = nil
-        
+        var timestamp: String? = nil
         // Act
-        self.repository?.getCamImage(camId: "1501") { data in
+        self.repository?.getCamImage(camId: "1501") { data, time in
             imageData = data
+            timestamp = time
             expectation.fulfill()
         }
         waitForExpectations(timeout: 30, handler: nil)
         
         // Assert
         XCTAssertNotNil(imageData)
+        XCTAssertNotNil(timestamp)
        
     }
     
@@ -112,14 +114,14 @@ class MockCamProvider: CamProviderProtocol {
         }
     }
     
-    func getImage(forCamId: String, onResponse: @escaping (Data?) -> Void) {
+    func getImage(forCamId: String, onResponse: @escaping (Data?, String?) -> Void) {
         if (self.isSuccess) {
             let mockData = Data("abc".utf8)
-            onResponse(mockData)
+            onResponse(mockData, "2020-07-18T16:00:00")
         }
         else {
              // return a failure
-            onResponse(nil)
+            onResponse(nil, nil)
         }
     }
     
