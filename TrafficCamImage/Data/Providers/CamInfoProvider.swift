@@ -131,8 +131,9 @@ class CamInfoProvider: CamProviderProtocol {
     private func getTimeStampNow()->String {
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-ddTHH:mm:ss"
-        return formatter.string(from: date)
+        formatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        let time = formatter.string(from: date)
+        return time
     }
     
 }
