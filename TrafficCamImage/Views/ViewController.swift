@@ -46,15 +46,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
         self.mapView.setCenter(viewModel.initialCoordinates, animated: true)
         self.showProgress()
         self.viewModel.getCameraList { cams, error in
-            if (nil == error) {
-                cams?.forEach { cam in
-                    self.mapView.addAnnotation(cam)
-                }
-            }
-            else {
-                self.showDialog(title: "Error", message: error?.message ?? "Failed to fetch camera locations.")
-            }
             DispatchQueue.main.async {
+                if (nil == error) {
+                    cams?.forEach { cam in
+                        self.mapView.addAnnotation(cam)
+                    }
+                }
+                else {
+                    
+                        self.showDialog(title: "Error", message: error?.message ?? "Failed to fetch camera locations.")
+                    
+                }
+            
                 self.hideProgress()
             }
         }
@@ -67,21 +70,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let cam = view.annotation as! CameraAnnotation
         self.showProgress()
         self.viewModel.getImageForCam(camera: cam.camera!) { image in
-            if (nil != image) {
-                self.camImagePopup.show(image: image!,
-                                        title: cam.camera?.timestamp ?? "Traffic Cam Image",
-                                        meta: cam.camera?.image_metadata) { _ in
-                    self.camImagePopup.hide()
+           DispatchQueue.main.async {
+                if (nil != image) {
+                    self.camImagePopup.show(image: image!,
+                                            title: cam.camera?.timestamp ?? "Traffic Cam Image",
+                                            meta: cam.camera?.image_metadata) { _ in
+                        self.camImagePopup.hide()
+                    }
+                    
+                }
+                else {
+                   
+                        // show error
+                        self.showDialog(title: "Error", message: "Failed to get camera image.")
                 }
                 
-            }
-            else {
-                // show error
-                self.showDialog(title: "Error", message: "Failed to get camera image.")
-            }
-            DispatchQueue.main.async {
-                self.hideProgress()
-            }
+                    self.hideProgress()
+                }
             
         }
     }
