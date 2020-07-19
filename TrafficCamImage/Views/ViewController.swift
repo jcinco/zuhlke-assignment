@@ -54,10 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             else {
                 self.showDialog(title: "Error", message: error?.message ?? "Failed to fetch camera locations.")
             }
-            
-            DispatchQueue.main.async {
-                self.hideProgress()
-            }
+            self.hideProgress()
         }
     }
     
@@ -79,13 +76,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 // show error
                 self.showDialog(title: "Error", message: "Failed to get camera image.")
             }
-            DispatchQueue.main.async {
-                self.hideProgress()
-            }
+            self.hideProgress()
             
         }
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "camAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        if (nil == annotationView) {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            
+        }
+        
+        return annotationView
+    }
+    
+    // Private methods
     
     private func showDialog(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

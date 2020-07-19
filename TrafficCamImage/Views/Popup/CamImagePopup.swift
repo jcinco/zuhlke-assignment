@@ -32,7 +32,10 @@ class CamImagePopup: UIView {
         super.didMoveToSuperview()
         //self.removeFromSuperview()
         self.layer.cornerRadius = 24
+        self.layer.shadowColor = UIColor.black.cgColor
         
+        self.layer.shadowOffset = CGSize(width: 0, height: 0.8)
+        self.layer.shadowOpacity = 0.5
     }
     
     @IBAction func buttonClick(sender: UIView) {
