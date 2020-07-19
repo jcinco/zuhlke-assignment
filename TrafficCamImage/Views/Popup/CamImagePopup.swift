@@ -56,6 +56,7 @@ class CamImagePopup: UIView {
                                           y: frame.origin.y,
                                           width: CGFloat(meta?.width ?? Float(frame.width)),
                                           height: CGFloat(meta?.height ?? Float(frame.height)))
+            
         }
         
         self.imageView.layer.cornerRadius = 20

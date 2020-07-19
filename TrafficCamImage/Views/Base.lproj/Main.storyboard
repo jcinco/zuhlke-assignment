@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQZ-ME-coo" customClass="CamImagePopup" customModule="TrafficCamImage" customModuleProvider="target">
                                 <rect key="frame" x="20" y="94" width="374" height="404"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-BM-6jQ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-BM-6jQ">
                                         <rect key="frame" x="8" y="67" width="358" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="240" id="neI-qS-V0q"/>

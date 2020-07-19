@@ -25,6 +25,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         self.initializeMap()
         
         self.hideProgress()
+        
     }
 
     
@@ -38,6 +39,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         if (viewModel.reposiory?.provider == nil) {
             viewModel.reposiory?.provider = CamInfoProvider(client: HttpGet.self)
         }
+        
+        
     }
     
     
@@ -53,11 +56,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
                     }
                 }
                 else {
-                    
-                        self.showDialog(title: "Error", message: error?.message ?? "Failed to fetch camera locations.")
-                    
+                    self.showDialog(title: "Error", message: error?.message ?? "Failed to fetch camera locations.")
                 }
-            
                 self.hideProgress()
             }
         }
@@ -77,19 +77,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
                                             meta: cam.camera?.image_metadata) { _ in
                         self.camImagePopup.hide()
                     }
-                    
                 }
                 else {
-                   
-                        // show error
-                        self.showDialog(title: "Error", message: "Failed to get camera image.")
+                    // show error
+                    self.showDialog(title: "Error", message: "Failed to get camera image.")
                 }
-                
-                    self.hideProgress()
-                }
+                self.hideProgress()
+            }
             
         }
     }
+    
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "camAnnotation"
@@ -106,6 +104,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     private func showDialog(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
  
